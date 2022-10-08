@@ -13,8 +13,8 @@
       =========项目列表=========<br>
     </div>
     <div class="bottom-cc">
-      嗨， 我是 chwan, Web Developer<br>
-      你可以在 Github 找到我 id：chwan97<br>
+      嗨，我是 chwan，Web Developer<br>
+      你可以在 Github 找到我，id：chwan97<br>
       你可以给我发一封邮件通过 <a href="#">mail#chwan.cc</a>(# -> @)
     </div>
   </div>
