@@ -1,21 +1,16 @@
 <template>
   <div>
-    <div class='icon-gu'>
+
+    <div class='p-left-title'>
+      =========项目列表=========<br>
+    </div>
+    <div class='p-icon-gu'>
       CHWAN
-      <div class='top-right'>
-        <div class='circle'></div>
-        {{ hours }}:{{ minutes }}:{{ second }}
+      <div class='p-top-right'>
+        <div class='p-circle'></div>
+        {{ hours }}:{{ minutes }}
       </div>
 
-    </div>
-    <div class='left-title'>
-      <NuxtLink to='/project-list'>=========项目列表=========</NuxtLink>
-      <br>
-    </div>
-    <div class='bottom-cc'>
-      嗨，我是 chwan，Web Developer<br>
-      你可以在 Github 找到我，id：chwan97<br>
-      你可以给我发一封邮件通过 <a href='#'>mail#chwan.cc</a>(# -> @)
     </div>
   </div>
 </template>
@@ -34,35 +29,17 @@ a, a:active, a:visited, a:hover {
   /*color: #5309CD;*/
 }
 
-.bottom-cc {
-  text-align: center;
-  position: fixed;
-  bottom: 30px;
-  transform: translateX(-50%);
-  left: 50%;
-  font-weight: 600;
-  color: #FFFF00;
-}
-
-.icon-gu {
-  font-size: 400px;
+.p-icon-gu {
+  font-size: 100px;
   color: #2030a0;
+  border: 5px solid #ddd;
   position: fixed;
-  top: 30px;
+  bottom: 20px;
   transform: translateX(-50%);
   left: 50%;
 }
 
-.left-title {
-  font-size: 25px;
-  color: #aaa;
-  position: fixed;
-  bottom: 150px;
-  transform: translateX(-50%);
-  left: 50%;
-}
-
-.circle {
+.p-circle {
   width: 40px;
   height: 40px;
   border-radius: 100px;
@@ -70,7 +47,7 @@ a, a:active, a:visited, a:hover {
   margin-right: 10px;
 }
 
-.top-right {
+.p-top-right {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -79,9 +56,16 @@ a, a:active, a:visited, a:hover {
   color: #d30000;
   align-items: center;
   font-weight: 600;
-  font-family: Monaco, Consolas;
 }
 
+.p-left-title {
+  font-size: 25px;
+  color: #aaa;
+  position: fixed;
+  bottom: 150px;
+  transform: translateX(-50%);
+  left: 50%;
+}
 </style>
 
 <script lang='js'>
@@ -94,16 +78,14 @@ export default {
     return {
       hours: '--',
       minutes: '--',
-      second: '--',
     }
   },
   computed: {},
   methods: {},
   mounted() {
-    setInterval(() => {
+    setImmediate(() => {
       this.hours = pad(2, (new Date()).getHours(), '0')
       this.minutes = pad(2, (new Date()).getMinutes(), '0')
-      this.second = pad(2, (new Date()).getSeconds(), '0')
     }, 1000)
   },
 }

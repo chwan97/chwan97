@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'chwan97',
+    title: 'chwan',
     htmlAttrs: {
       lang: 'zh'
     },
@@ -42,6 +42,7 @@ export default {
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
+    '@nuxt/typescript-build',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
